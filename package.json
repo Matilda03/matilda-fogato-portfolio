@@ -10,5 +10,12 @@
   "devDependencies": {
     "content-wind": "latest",
     "nuxt": "latest"
+  },
+  "dependencies": {
+    "@vercel/kv": "^1.0.1",
+    "@vercel/postgres": "^0.8.0",
+    "axios": "^1.7.2",
+    "next": "^14.2.3",
+    "vue": "^3.4.27"
   }
 }

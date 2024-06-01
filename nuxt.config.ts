@@ -1,3 +1,8 @@
 export default defineNuxtConfig({
-  extends: 'content-wind'
+  extends: 'content-wind',
+  nitro: {
+    storage: {
+      data: { driver: 'vercelKV' },
+    },
+  },
 })
