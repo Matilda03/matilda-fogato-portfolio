@@ -8,12 +8,12 @@
     "preview": "nuxi preview"
   },
   "devDependencies": {
-    "content-wind": "latest",
+    "content-wind": "^1.1.1",
     "nuxt": "latest"
   },
   "dependencies": {
     "@vercel/kv": "^1.0.1",
-    "@vercel/postgres": "^0.8.0",
+    "@vercel/postgres": "^0.10.0",
     "axios": "^1.7.2",
     "next": "^14.2.3",
     "vue": "^3.4.27"
