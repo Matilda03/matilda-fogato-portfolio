@@ -8,8 +8,10 @@
     "preview": "nuxi preview"
   },
   "devDependencies": {
+    "@tailwindcss/typography": "^0.5.15",
     "content-wind": "^1.1.1",
-    "nuxt": "latest"
+    "nuxt": "latest",
+    "tailwindcss": "^3.4.17"
   },
   "dependencies": {
     "@vercel/kv": "^1.0.1",
