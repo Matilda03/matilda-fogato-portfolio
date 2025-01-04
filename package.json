@@ -1,5 +1,5 @@
 {
-  "name": "content-wind-template",
+  "name": "dash-brain-portfolio",
   "private": true,
   "scripts": {
     "dev": "nuxi dev",
