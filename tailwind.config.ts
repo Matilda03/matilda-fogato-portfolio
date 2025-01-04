@@ -14,6 +14,9 @@ export default {
             fontFamily: {
                 inter: ['"Inter"', 'sans-serif'],
                 georgia: ['"Georgia"', 'serif'],
+            },
+            colors: {
+                primary: colors.sky,
             }
         }
     }
