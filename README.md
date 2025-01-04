@@ -1,4 +1,4 @@
-# DashBrain - a personal portfolio website
+# A personal portfolio website
 
 My website made by [Content Wind](https://content-wind.nuxt.space) theme.
 
