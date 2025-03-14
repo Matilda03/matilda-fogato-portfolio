@@ -4,7 +4,7 @@ import typography from '@tailwindcss/typography'
 export default {
     darkMode: 'class',
     plugins: [
-        typography(),
+        typography,
     ],
     theme: {
         fontFamily: {
@@ -17,6 +17,15 @@ export default {
             },
             colors: {
                 primary: colors.sky,
+            },
+            typography: {
+                DEFAULT: {
+                    css: {
+                        h1: {
+                            fontWeight: '600',
+                        }
+                    }
+                }
             }
         }
     }
