@@ -1,0 +1,32 @@
+@import "tailwindcss";
+@import "@nuxt/ui";
+@plugin "@tailwindcss/typography";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@source "../../../content/**/*";
+
+/* Set up custom fonts */
+
+:root {
+ --font-sans: 'Figtree', sans-serif;
+ --font-poppins: 'Poppins', sans-serif;
+}
+
+body {
+  @apply bg-zinc-50 text-black dark:bg-zinc-900 dark:text-white;
+}
+
+/* Custom heading styles */
+.prose h2, .prose h3, .prose h4, .prose h5, .prose h6 {
+    font-family: var(--font-poppins), sans-serif;
+    font-weight: 600;
+}
+
+.prose a {
+  /* Remove the default underline */
+    @apply no-underline;
+}
+
+.prose a:not(h2 a, h3 a, h4 a, h5 a, h6 a) {
+  @apply text-sky-500 dark:text-sky-400;
+}
