@@ -2,7 +2,7 @@
 </script>
 
 <template>
-<span class="prose dark:prose-invert">
+<span class="prose dark:prose-invert" id="about">
   <!-- Image Card: two columns side by side for wide screens, stack for narrow screens -->
   <div class="columns-2">
     <div class="column text-sm">
