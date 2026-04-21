@@ -1,33 +1,62 @@
-## Overview
-This project uses the [Content Wind](https://github.com/atinux/content-wind) theme for building a personal website. 
-It includes Markdown-based pages, code highlighting, responsive design, and light/dark modes.
+# Nuxt Docs Template
 
-> [!IMPORTANT]
-> This is not an original theme. It is a customization of a theme developed by [Atinux](https://atinux.com/).
+[![Nuxt UI](https://img.shields.io/badge/Made%20with-Nuxt%20UI-00DC82?logo=nuxt&labelColor=020420)](https://ui.nuxt.com)
 
-## Custom Components
-### Hero Section
-Displays a full\-screen introduction section with a random network animation in the background.
+Use this template to build your own documentation with [Nuxt UI](https://ui.nuxt.com) quickly.
 
-### Article Card
-Renders a summarized version of a blog article or content entry, including title, excerpt, and a link to read more.
+- [Live demo](https://docs-template.nuxt.dev/)
+- [Documentation](https://ui.nuxt.com/docs/getting-started/installation)
 
-### Two-Column Grid 
-Displays a column of text on the left and an image on the right, used to construct the "About Me" section.
+<a href="https://docs-template.nuxt.dev/" target="_blank">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://ui.nuxt.com/assets/templates/nuxt/docs-dark.png">
+    <source media="(prefers-color-scheme: light)" srcset="https://ui.nuxt.com/assets/templates/nuxt/docs-light.png">
+    <img alt="Nuxt Docs Template" src="https://ui.nuxt.com/assets/templates/nuxt/docs-light.png">
+  </picture>
+</a>
 
-## Usage
-Add or edit pages in the `content/` directory. Update the global configuration in `app.config.ts`. Modify or extend styles in `tailwind.config.js` or `main.css`. Use the custom components above by importing them into Vue pages and inserting them in the template.
+## Quick Start
 
-## Deployment
-Generate a static build:
-```bash
-npm run generate
-```
-Or serve via Node:
-```bash
-npm run build
-npm run start
+```bash [Terminal]
+npm create nuxt@latest -- -t github:nuxt-ui-templates/docs
 ```
 
-## License
-Refer to the `LICENSE` file for more information.
+## Deploy your own
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-name=docs&repository-url=https%3A%2F%2Fgithub.com%2Fnuxt-ui-templates%2Fdocs&demo-image=https%3A%2F%2Fui.nuxt.com%2Fassets%2Ftemplates%2Fnuxt%2Fdocs-dark.png&demo-url=https%3A%2F%2Fdocs-template.nuxt.dev%2F&demo-title=Nuxt%20Docs%20Template&demo-description=A%20documentation%20template%20powered%20by%20Nuxt%20Content.)
+
+## Setup
+
+Make sure to install the dependencies:
+
+```bash
+pnpm install
+```
+
+## Development Server
+
+Start the development server on `http://localhost:3000`:
+
+```bash
+pnpm dev
+```
+
+## Production
+
+Build the application for production:
+
+```bash
+pnpm build
+```
+
+Locally preview production build:
+
+```bash
+pnpm preview
+```
+
+Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+
+## Renovate integration
+
+Install [Renovate GitHub app](https://github.com/apps/renovate/installations/select_target) on your repository and you are good to go.

@@ -1,39 +1,95 @@
-import tailwindcss from '@tailwindcss/vite'
-
+// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   modules: [
-    '@nuxt/content',
-    '@nuxt/icon',
     '@nuxt/eslint',
-    '@nuxtjs/color-mode',
-    '@nuxt/fonts',
     '@nuxt/image',
-    '@nuxt/scripts',
-    '@nuxt/test-utils',
     '@nuxt/ui',
-    'nuxt-studio',
+    '@nuxt/content',
+    'nuxt-og-image',
+    'nuxt-llms',
+    '@nuxtjs/mcp-toolkit',
+    'nuxt-studio'
   ],
 
-  css: ['assets/css/main.css'],
-  colorMode: { classSuffix: '' },
+  devtools: {
+    enabled: true,
+
+    timeline: {
+      enabled: true
+    }
+  },
+  studio: {
+    dev: false
+  },
+
+  css: ['~/assets/css/main.css'],
 
   content: {
     build: {
       markdown: {
-        highlight: {
-          // See the available themes on https://github.com/shikijs/shiki/blob/main/docs/themes.md#all-theme
-          theme: {
-            dark: 'github-dark',
-            default: 'github-light',
-          },
-        },
-      },
-    },
+        toc: {
+          searchDepth: 1
+        }
+      }
+    }
   },
-  future: {
-    compatibilityVersion: 4,
-  },
-  compatibilityDate: '2025-02-19',
 
-  vite: { plugins: [tailwindcss()] },
+  experimental: {
+    asyncContext: true
+  },
+
+  compatibilityDate: '2024-07-11',
+
+  nitro: {
+    prerender: {
+      routes: [
+        '/'
+      ],
+      crawlLinks: true,
+      autoSubfolderIndex: false
+    }
+  },
+
+  eslint: {
+    config: {
+      stylistic: {
+        commaDangle: 'never',
+        braceStyle: '1tbs'
+      }
+    }
+  },
+
+  icon: {
+    provider: 'iconify'
+  },
+
+  llms: {
+    domain: 'https://fogato.dev/',
+    title: 'Fogato.dev',
+    description: 'Matilda Fogato is a software engineer and researcher specialized in AI and digital twins.',
+    full: {
+      title: 'Fogato.dev',
+      description: 'This is the full documentation for the Nuxt Docs Template.'
+    },
+    sections: [
+      {
+        title: 'Getting Started',
+        contentCollection: 'docs',
+        contentFilters: [
+          { field: 'path', operator: 'LIKE', value: '/getting-started%' }
+        ]
+      },
+      {
+        title: 'Essentials',
+        contentCollection: 'docs',
+        contentFilters: [
+          { field: 'path', operator: 'LIKE', value: '/essentials%' }
+        ]
+      }
+    ]
+  },
+
+  mcp: {
+    name: 'Docs template'
+  }
 })

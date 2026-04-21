@@ -1,19 +1,51 @@
 <script setup lang="ts">
-const { cover } = useAppConfig()
+const { seo } = useAppConfig()
+
+const { data: navigation } = useAsyncData('navigation', () => queryCollectionNavigation('docs'))
+const { data: files } = useLazyAsyncData('search', () => queryCollectionSearchSections('docs'), {
+  server: false
+})
+
+useHead({
+  meta: [
+    { name: 'viewport', content: 'width=device-width, initial-scale=1' }
+  ],
+  link: [
+    { rel: 'icon', href: '/favicon.ico' }
+  ],
+  htmlAttrs: {
+    lang: 'en'
+  }
+})
 
 useSeoMeta({
-  ogImage: cover,
-  twitterCard: 'summary_large_image',
+  titleTemplate: `%s - ${seo?.siteName}`,
+  ogSiteName: seo?.siteName,
+  twitterCard: 'summary_large_image'
 })
+
+provide('navigation', navigation)
 </script>
 
 <template>
-  <div class="sm:pt-6 sm:pb-10">
-    <Html lang="en" />
-    <UApp>
+  <UApp>
     <NuxtLoadingIndicator />
-    <AppNavbar />
-    <NuxtPage />
-    </UApp>
-  </div>
+
+    <AppHeader />
+
+    <UMain>
+      <NuxtLayout>
+        <NuxtPage />
+      </NuxtLayout>
+    </UMain>
+
+    <AppFooter />
+
+    <ClientOnly>
+      <LazyUContentSearch
+        :files="files"
+        :navigation="navigation"
+      />
+    </ClientOnly>
+  </UApp>
 </template>

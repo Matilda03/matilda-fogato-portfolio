@@ -1,47 +1,41 @@
 {
-  "name": "content-wind",
-  "description": "A personal website theme powered by Nuxt Content, TailwindCSS, Iconify and Vue components.",
-  "private": false,
-  "version": "2.0.0",
-  "main": "nuxt.config.ts",
-  "license": "MIT",
+  "name": "matilda-fogato-portfolio",
+  "private": true,
+  "type": "module",
   "scripts": {
-    "dev": "nuxi dev",
-    "build": "nuxi build",
-    "generate": "nuxi generate",
-    "preview": "nuxi preview",
-    "lint": "eslint ."
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "lint": "eslint .",
+    "typecheck": "nuxt typecheck"
   },
   "dependencies": {
-    "@iconify-json/lucide": "^1.2.28",
-    "@iconify-json/simple-icons": "^1.2.27",
-    "@nuxt/content": "^3.2.2",
-    "@nuxt/fonts": "0.11.0",
-    "@nuxt/icon": "^1.10.3",
-    "@nuxt/image": "1.10.0",
-    "@nuxt/scripts": "0.11.2",
-    "@nuxt/test-utils": "3.17.2",
-    "@nuxt/ui": "3.0.0",
-    "@nuxtjs/color-mode": "^3.5.2",
-    "@tailwindcss/typography": "^0.5.16",
-    "@tailwindcss/vite": "^4.0.9",
-    "@unhead/vue": "^2.0.0-rc.8",
-    "nuxt": "^3.16.0",
-    "nuxt-studio": "1.0.0-alpha.4",
-    "tailwindcss": "^4.0.9"
+    "@iconify-json/lucide": "^1.2.96",
+    "@iconify-json/simple-icons": "^1.2.72",
+    "@iconify-json/vscode-icons": "^1.2.44",
+    "@nuxt/content": "^3.12.0",
+    "@nuxt/image": "^2.0.0",
+    "@nuxt/ui": "^4.5.1",
+    "@nuxtjs/mcp-toolkit": "^0.7.0",
+    "@nuxtjs/mdc": "^0.20.2",
+    "@vueuse/core": "^14.2.1",
+    "better-sqlite3": "^12.6.2",
+    "minimark": "^0.2.0",
+    "nuxt": "^4.3.1",
+    "nuxt-llms": "0.2.0",
+    "nuxt-og-image": "^5.1.13",
+    "nuxt-studio": "1.4.0",
+    "tailwindcss": "^4.2.1",
+    "ufo": "^1.6.3",
+    "unist-util-visit": "^5.1.0",
+    "zod": "^4.3.6"
   },
   "devDependencies": {
-    "@nuxt/eslint": "^1.1.0",
-    "eslint": "^9.21.0",
-    "typescript": "^5.8.2"
+    "@nuxt/eslint": "^1.15.2",
+    "eslint": "^10.0.3",
+    "typescript": "^5.9.3",
+    "vue-tsc": "^3.2.5"
   },
-  "packageManager": "pnpm@10.25.0+sha512.5e82639027af37cf832061bcc6d639c219634488e0f2baebe785028a793de7b525ffcd3f7ff574f5e9860654e098fe852ba8ac5dd5cefe1767d23a020a92f501",
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "@parcel/watcher",
-      "better-sqlite3",
-      "esbuild",
-      "vue-demi"
-    ]
-  }
+  "packageManager": "pnpm@10.30.3"
 }
