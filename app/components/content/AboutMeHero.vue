@@ -13,10 +13,10 @@
             About Me
           </h2>
           <p class="text-neutral-600 dark:text-neutral-300 text-lg leading-relaxed">
-            I'm a passionate computer science student with experience in front-end development, AI, and Digital Twins. I love creating intuitive designs and solving challenging problems.
+            I'm a passionate Human-Technology Interaction student with experience in front-end development, AI, and Digital Twins. I love creating intuitive designs and solving challenging problems.
           </p>
           <p class="text-neutral-600 dark:text-neutral-300 text-lg leading-relaxed">
-            For the past two years, I've been part of the EAISI Digital Twins Lab at Eindhoven University of Technology, developing a software stack for digital twins. My work focuses on creating simulations and visualizations that connect physical assets to their virtual counterparts, turning complex data into practical insights.
+            For the past three years, I've been part of the EAISI Digital Twins Lab at Eindhoven University of Technology, developing a software stack for digital twins. My work focuses on creating simulations and visualizations that connect physical assets to their virtual counterparts, turning complex data into practical insights.
           </p>
           <p class="text-neutral-600 dark:text-neutral-300 text-lg leading-relaxed">
             When I'm not coding, I'm probably exploring new tech, reading a psychology book, or playing guitar somewhere in Spain.
